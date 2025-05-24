@@ -1,0 +1,17 @@
+<div>
+    <h2>MEAN Stack ToDo App</h2>
+
+    <input [(ngModel)]="newTitle" placeholder="New Todo" class="form-control" />
+    <button class="button" (click)="addTodo()">Add</button>
+
+    <ul>
+        <li *ngFor="let todo of todos">
+            <!-- <input type="checkbox" [(ngModel)]="todo.completed" (change)="toggleComplete(todo)" /> -->
+            <span [style.text-decoration]="todo.completed ? 'line-through' : 'none'">
+                {{ todo.title }}
+            </span>
+
+            <button class="button" (click)="deleteTodo(todo)">Delete</button>
+        </li>
+    </ul>
+</div>

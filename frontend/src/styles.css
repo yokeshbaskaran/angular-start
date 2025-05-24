@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul {
+  width: 30%;
+  padding: 10px;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid red;
+}
+
+.navbar ul a {
+  cursor: pointer;
+}
+
+/* content  */
+.container {
+  width: 60%;
+  margin: 50px auto;
+  padding: 10px;
+  border: 2px solid red;
+}
+
+.card {
+  padding: 15px;
+}
+
+label {
+  font-size: 18px;
+  color: rgb(77, 72, 72);
+  font-weight: 600;
+}
+
+.mb-3 {
+  margin-block: 20px;
+}
+
+.form-control {
+  width: 60%;
+  margin-block: 8px;
+  display: block;
+  padding: 8px;
+  border: 1px solid rgb(25, 142, 185);
+  border-radius: 5px;
+}
+
+.button {
+  all: unset;
+  margin-top: 15px;
+  padding: 8px 20px;
+  color: black;
+  background-color: rgb(22, 170, 170);
+  border-radius: 5px;
+}
