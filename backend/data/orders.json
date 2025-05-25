@@ -1,0 +1,41 @@
+[
+    {
+        "_id": {
+            "$oid": "775b2bfe1f1e8e1a1f1a1f1a"
+        },
+        "userId": {
+            "$oid": "665b2bfe1f1e8e1a1f1a1f1a"
+        },
+        "total": 120,
+        "items": 3,
+        "date": {
+            "$date": "2025-05-20T10:00:00Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "775b2bfe1f1e8e1a1f1a1f1b"
+        },
+        "userId": {
+            "$oid": "665b2bfe1f1e8e1a1f1a1f1a"
+        },
+        "total": 80,
+        "items": 2,
+        "date": {
+            "$date": "2025-05-22T12:00:00Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "775b2bfe1f1e8e1a1f1a1f1c"
+        },
+        "userId": {
+            "$oid": "665b2bfe1f1e8e1a1f1a1f1b"
+        },
+        "total": 200,
+        "items": 5,
+        "date": {
+            "$date": "2025-05-23T15:30:00Z"
+        }
+    }
+]

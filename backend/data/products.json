@@ -1,0 +1,26 @@
+[
+    {
+        "_id": {
+            "$oid": "885b2bfe1f1e8e1a1f1a1f1a"
+        },
+        "name": "Laptop",
+        "price": 1000,
+        "stock": 10
+    },
+    {
+        "_id": {
+            "$oid": "885b2bfe1f1e8e1a1f1a1f1b"
+        },
+        "name": "Mouse",
+        "price": 50,
+        "stock": 100
+    },
+    {
+        "_id": {
+            "$oid": "885b2bfe1f1e8e1a1f1a1f1c"
+        },
+        "name": "Keyboard",
+        "price": 80,
+        "stock": 50
+    }
+]

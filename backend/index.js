@@ -2,11 +2,18 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
-const bodyParser = require("body-parser");
 
 app.use(cors({ origin: ["http://localhost:4200"] }));
 app.use(express.json());
 
+// mongoose
+// import JSON
+// mongoimport
+// --uri="mongodb://localhost:27017"
+// --db demo
+// --collection test
+// --file ./data/users.json
+// --jsonArray
 mongoose
   .connect("mongodb://localhost:27017/mean-todo")
   .then(() => console.log("MongoDB connected!"))
@@ -20,7 +27,17 @@ const todoSchema = new mongoose.Schema({
 
 const Todo = mongoose.model("todo", todoSchema);
 
+//forms
+const formSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  address: { type: String, required: true },
+  phone: { type: String, required: true },
+});
+
+const Forms = mongoose.model("form", formSchema);
+
 //routes
+// Todos
 app.get("/api/todos", async (req, res) => {
   try {
     const todos = await Todo.find();
@@ -53,6 +70,31 @@ app.delete("/api/todos/:id", async (req, res) => {
     res.status(200).json({ message: `Todo id:${id} deleted` });
   } catch (error) {
     console.log("GET Error" + error);
+  }
+});
+
+// Todos
+app.get("/api/forms", async (req, res) => {
+  try {
+    const forms = await Forms.find();
+    res.status(200).json(forms);
+  } catch (error) {
+    console.log("GET forms Error" + error);
+  }
+});
+
+app.post("/api/forms", async (req, res) => {
+  const { name, address, phone } = req.body;
+  try {
+    if (!name || !address || !phone)
+      return res.status(404).json({ error: "Data is required!" });
+
+    const forms = await Forms.create({ name, address, phone });
+    console.log("forms", forms);
+
+    res.status(201).json(forms);
+  } catch (error) {
+    console.log("POST Forms Error" + error);
   }
 });
 

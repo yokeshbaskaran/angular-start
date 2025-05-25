@@ -2,28 +2,42 @@
     <div class="card">
         <h2>Students Regiser form</h2>
 
-
-        <!-- <form>
+        <form (ngSubmit)="userData()">
             <div class="form-group">
                 <div class="mb-3">
                     <label for="name" class="form-label">Your Name:</label>
-                    <input type="text" [(ngModel)]="name" class="form-control" id="name" placeholder="Enter name">
+                    <input type="text" [(ngModel)]="name" name="name" class="form-control" id="name"
+                        placeholder="Enter name">
                 </div>
 
                 <div class="mb-3">
                     <label for="address" class="form-label">Your Address:</label>
-                    <input type="text" class="form-control" id="address" placeholder="Enter address">
+                    <input type="text" [(ngModel)]="address" name="address" class="form-control" id="address"
+                        placeholder="Enter address">
                 </div>
 
                 <div class="mb-3">
                     <label for="phone" class="form-label">Phone no:</label>
-                    <input type="text" class="form-control" id="phone" placeholder="Enter phone">
+                    <input type="text" [(ngModel)]="phone" name="phone" class="form-control" id="phone"
+                        placeholder="Enter phone">
                 </div>
             </div>
 
             <button type="submit" class="button">Submit</button>
-        </form> -->
+        </form>
 
 
+    </div>
+
+    <div class="card">
+        <p>Total students: {{ students.length }}</p>
+
+        <ul>
+            <li *ngFor="let student of students">
+                <p>Name: {{ student.name }}</p>
+                <p>address: {{ student.address }}</p>
+                <p>phone: {{ student.phone }}</p>
+            </li>
+        </ul>
     </div>
 </div>

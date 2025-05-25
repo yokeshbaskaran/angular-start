@@ -1,13 +1,12 @@
 <nav class="navbar">
     <h3>Logo</h3>
+
     <ul>
-        <a routerLink="/">Home</a>
+        <a routerLink="/" routerLinkActive="active">Home</a>
         <a routerLink="/todo">Todo List</a>
         <a routerLink="/student">Student List</a>
     </ul>
 </nav>
 
-<app-students> </app-students>
-<app-todo-list></app-todo-list>
 
-<router-outlet />
+<router-outlet></router-outlet>

@@ -1,13 +1,9 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { StudentsComponent } from './students/students.component';
-import { TodoComponent } from './components/todo/todo.component';
-import { HttpClient } from '@angular/common/http';
-
+import { RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, StudentsComponent, TodoComponent],
+  imports: [RouterOutlet, RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
